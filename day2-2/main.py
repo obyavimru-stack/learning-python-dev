@@ -17,16 +17,15 @@ except ValueError:
     
 # задание 3 - площадь квадрата
 st = int(input("Введите сторону квадрата: "))
-pl = st*st
-print("Площадь квадрата:",pl)
+print("Площадь квадрата:",st*st)
 
 # задание 4 - конвертер времени
 sec = int(input("Введите количество секунд: "))
-min = sec/60
-print("Это",min,"минут")
+minutes = sec/60
+print("Это",minutes,"минут")
 
-chas = sec/3600
-print("Это",chas,"часов")
+hours = sec/3600
+print("Это",hours,"часов")
 
 # задание 5 - проверка температуры
 temp = int(input("Введите температуру: "))
@@ -49,7 +48,7 @@ else:
 
 # задание 7 -простой кредитный рейтинг
 doh = int(input("Введите сумму дохода: "))
-if doh == 100000:
+if doh >= 100000:
     print("Высокий доход")
 elif 50000 <= doh <= 99999:
     print("Средний доход")
@@ -88,7 +87,7 @@ else:
 
 if value_a < value_b and value_a < value_c:
     print("Самое маленькое число:", value_a)
-elif value_b < value_a and value_b < value_c
+elif value_b < value_a and value_b < value_c:
     print("Самое маленькое число:", value_b)
 else:
     print("Самое маленькое число:", value_c)
@@ -98,6 +97,4 @@ if value_a == value_b or value_a == value_c or value_b == value_c:
 else:
     print("Все числа разные")
 
-
-с = a/b
 
