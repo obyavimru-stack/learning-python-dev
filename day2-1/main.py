@@ -1,26 +1,25 @@
 # задание 1
-try:
-    login = input("Введите логин: ")
-    pwd = input("Введите пароль: ")
-    if login == "admin" and pwd == "12345":
-        print("Вход выполнен")
-except ValueError:
-        print("Неверный логин или пароль")
+login = input("Введите логин: ")
+pwd = input("Введите пароль: ")
+
+if login == "admin" and pwd == "12345":
+    print("Вход выполнен")
+else:
+    print("Неверный логин или пароль")
+
 
 # задание 2
 try:
     a = int(input("Введите первое число: "))
     b = int(input("Введите второе число: "))
     op = input("Введите операцию: (+),(-),(*),(/): ")
+
     if op == "+":
-        c = a + b
-        print(c)
+        print(a + b)
     elif op == "-":
-        c = a - b
-        print(c)
+        print(a - b)
     elif op == "*":
-        c = a * b
-        print(c)
+        print(a * b)
     elif op == "/":
         if b == 0:
             print("Делить на ноль нельзя")
@@ -28,48 +27,57 @@ try:
             print(a / b)
     else:
         print("Неизвестная операция")
+
 except ValueError:
-        print("Введено не числовое значение")
+    print("Введено не числовое значение")
+
 
 # задание 3
-
+try:
     mes = int(input("Введите номер месяца: "))
     if mes == 12 or mes == 1 or mes == 2:
         print("Зима")
     elif 3 <= mes <= 5:
         print("Весна")
-    elif 6 <= mes <=8:
+    elif 6 <= mes <= 8:
         print("Лето")
-    elif 9 <= mes <=11:
+    elif 9 <= mes <= 11:
         print("Осень")
     else:
         print("Введите число от 1 до 12")
+
+except ValueError:
+    print("Введите число")
+
 
 # задание 4
 try:
     value_a = int(input("Введите первое число: "))
     value_b = int(input("Введите второе число: "))
     value_c = int(input("Введите третье число: "))
+
     if value_a > value_b and value_a > value_c:
         print("Самое большое число:", value_a)
     elif value_b > value_a and value_b > value_c:
         print("Самое большое число:", value_b)
-    elif value_c > value_a and value_c > value_b:
+    else:
         print("Самое большое число:", value_c)
 
     if value_a < value_b and value_a < value_c:
-        print("Самое маленькое число:",value_a)
+        print("Самое маленькое число:", value_a)
     elif value_b < value_a and value_b < value_c:
         print("Самое маленькое число:", value_b)
-    elif value_c < value_a and value_c < value_b:
-        print("Самое маленькое число:",value_c)
+    else:
+        print("Самое маленькое число:", value_c)
 
     if value_a == value_b or value_a == value_c or value_b == value_c:
         print("Есть одинаковые числа")
     else:
         print("Все числа разные")
+
 except ValueError:
     print("Ошибка ввода")
+
 
 # задание 5
 try:
@@ -82,6 +90,7 @@ try:
 
 except ValueError:
     print("Введите год")
+
 
 # задание 6
 try:
@@ -105,6 +114,7 @@ try:
 except ValueError:
     print("Введите число")
 
+
 # задание 7
 try:
     hours = int(input("Введите количество часов: "))
@@ -117,6 +127,7 @@ try:
 
 except ValueError:
     print("Введите число")
+
 
 # задание 8
 try:
@@ -137,6 +148,7 @@ try:
 
 except ValueError:
     print("Введите число")
+
 
 # задание 9
 try:
@@ -160,7 +172,9 @@ try:
 except ValueError:
     print("Введите число")
 
+
 # задание 10
+try:
     age = int(input("Введите возраст: "))
     student = input("Есть студенческий билет? (yes/no): ")
 
@@ -175,11 +189,10 @@ except ValueError:
     else:
         price = 120
 
-    # скидка студентам 18-25
     if 18 <= age <= 25 and student == "yes":
         price = price / 2
 
     print("Цена билета:", price)
 
-
-
+except ValueError:
+    print("Введите возраст числом")
